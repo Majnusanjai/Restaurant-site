@@ -1,0 +1,204 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="book.js"></script>
+    <script src="your-script.js" defer></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body class="bg-dark">
+    <div class="container bg-secondary">
+        <header>
+            <div class="row text-light pt-2 align-items-center">
+                <div class="col col-2 md-4 text-center text-md-start mt-2">🍽️ FOOD LAB</div>
+                <nav class="col col-8 md-4 mt-2">
+                    <ul class="ps-5 nav justify-content-center justify-content-md-start">
+                        <li class=" nav-item "><a class=" nav-link text-light" href="#">Home</a></li>
+                        <li class="nav-item sm ps-3"><a class=" nav-link text-light" href="#">About</a></li>
+                        <li class="nav-item "><a class=" nav-link text-light" href="#">Menu</a></li>
+                        <li class="nav-item"><a class=" nav-link text-light" href="#">Reservation</a></li>
+                        <li class="nav-item"><a class=" nav-link text-light" href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <div class="col col-2 md-4 d-flex justify-content-center justify-content-md-end mt-2">
+                    <button id="book-table-btn" class="btn btn-primary rounded">Book Table</button>
+                </div>
+            </div>
+        </header>
+    
+
+        <div class="my-3">
+            <div class="mx-3">
+                <img class=" new img-fluid" src="img/Restaurant-Web.webp" alt="Restaurant interior">
+            </div>
+        </div>
+
+        <section class="row my-3 mx-2">
+            <div class="col-12 col-md-3 mb-2">
+                <input type="text" id="numPersons" class="form-control" placeholder="Select number of persons">
+            </div>
+            <div class="col-12 col-md-3 mb-2">
+                <input type="date" id="reservationDate" class="form-control">
+            </div>
+            <div class="col-12 col-md-3 mb-2">
+                <input type="time" id="reservationTime" class="form-control">
+            </div>
+            <div class="col-12 col-md-3 d-flex justify-content-center align-items-end">
+                <button class="btn btn-primary rounded" onclick="checkAvailability()">Check Availability</button>
+            </div>
+            <div id="availabilityMessage" class="text-light text-center my-3"></div>
+        </section>
+
+        <hr>
+
+        <section class="row mt-5">
+            <div class="col-12 col-md-3">
+                <ul class="list-unstyled">
+                    <li class="h3  sm ps-5 ms-5">Visit our bar</li>
+                    <li class="h2  sm ps-5 ms-4">Open Hours</li>
+                    <li class=" sm ps-4">Monday-Friday: 4:00 pm - 1:00 am</li>
+                    <li class="ms-4 py-3 sm ps-4">Saturday: 4:00 pm - 3:00 am</li>
+                    <li class="ms-4 sm ps-4">Sunday: 4:00 pm - 2:00 am</li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6">
+                <img class=" two ps-5 sm pe-5 img-fluid" src="img/img-3.jpg" alt="Bar area">
+            </div>
+            <div class="col-12 col-md-3">
+                <ul class="list-unstyled">
+                    <li class="h3 me-4 sm ms-4 my-3 ps-5">The Best Offer</li>
+                    <li class="h1 sm ps-5 ms-3">Happy Hour</li>
+                    <li class=" ms-1 sm ps-3">Monday-Friday: 4:00 pm - 7:00 pm</li>
+                    <li class="ms-3 sm ps-4">20% off all wine by the glass</li>
+                    <li class="ms-5 sm ps-2">15% off all cocktails</li>
+                    <li class="ms-3 sm ps-4">20% off selected craft beer</li>
+                    <li class="ms-5 sm ps-2">15% off all spirits</li>
+                </ul>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="text-light text-center">
+            <h1>About Us</h1>
+        </section>
+
+        <section class="row">
+            <div class="col-12 col-md-6 mb-3 mb-md-0">
+                <img class="History ps-2 sm ps-4 img-fluid" src="img/images.jpg" alt="Restaurant ambiance">
+            </div>
+            <div class="col-12 col-md-6">
+                <h4 class="text-light text-center">History</h4>
+                <p class="text-dark text-center">Indulge your senses in a culinary journey at our restaurant, where each dish is a masterpiece crafted with passion and precision. Our carefully curated menu showcases a fusion of flavors, blending traditional favorites with innovative twists that promise to tantalize your taste buds. Immerse yourself in an inviting ambiance, where warm lighting and thoughtfully designed decor create the perfect backdrop for unforgettable dining experiences.</p>
+                <div class="text-center">
+                    <button  class="btn bg-dark px-5 btn-secondary">Know More</button>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="text-light text-center">
+            <h3>This Week's Specials</h3>
+            <h1>Chef's Recommendations</h1>
+            <ul class="list-unstyled text-dark">
+                <li>Mango Tango Shrimp Skewers, Truffle Infused Chicken Alfredo, Portobello Mushroom Wellington</li>
+                <li>Citrus Glazed Salmon, Decadent Chocolate Hazelnut Torte</li>
+            </ul>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <ul class="list-unstyled">
+                        <li class="h4">Italian</li>
+                        <li class="text-dark text-decoration-underline">Risotto, Pizza, Pasta... Starts from $6</li>
+                        <li class="h4">Chinese</li>
+                        <li class="text-dark text-decoration-underline">Hot Soups, Tofu, Chow Mein... Starts from $5</li>
+                        <li class="h4">Mexican</li>
+                        <li class="text-dark text-decoration-underline">Tacos, Enchiladas, Salsa... Starts from $7</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-6">
+                    <img class="three img-fluid" src="img/food img.jpg" alt="Food offerings">
+                </div>
+            </div>
+        </section>
+
+        <hr></hr>
+
+
+
+    
+
+        
+     
+
+        <hr></hr>
+
+        <section class="mt-5 text-light text-center">
+            <h1 >Attractions</h1>
+            <ul class="list-unstyled">
+                <li class="text-dark">Experience a culinary journey at Restaurant Food Lab, where innovative flavors and expertly crafted dishes redefine the art of dining.</li>
+            </ul>
+            <div class="row">
+                <div class="col-12 col-md-4 mb-3">
+                    <img class="img-fluid rounded" src="img/candle img.jpg" alt="Candle Dinner">
+                    <div>Candle Dinner</div>
+                </div>
+                <div class="col-12 col-md-4 mb-3">
+                    <img class="img-fluid rounded" src="img/lawn side.jpg" alt="Lawn Side">
+                    <div>Lawn Side</div>
+                </div>
+                <div class="col-12 col-md-4 mb-3">
+                    <img class="img-fluid rounded" src="img/roof top 2.jpg" alt="Roof Top">
+                    <div>Roof Top</div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 col-md-4 mb-3">
+                    <img class="img-fluid rounded" src="img/cocktail4.jpg" alt="Cocktails">
+                    <div>Cocktails</div>
+                </div>
+                <div class="col-12 col-md-4 mb-3">
+                    <img class="img-fluid rounded" src="img/poolside2.jpg" alt="Pool Side">
+                    <div>Pool Side</div>
+                </div>
+                <div class="col-12 col-md-4 mb-3">
+                    <img class="img-fluid rounded" src="img/wine4.jpg" alt="Wine Yard">
+                    <div>Wine Yard</div>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <button class="btn btn-dark text-light px-5 rounded">Know More</button>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="text-light text-center mt-5">
+            
+
+           
+    </div>  
+
+    <footer class="text-light text-center py-4">
+        <p>© 2024 Food Lab. All rights reserved.</p>
+        <p>Follow us on:
+            <a href="#" class="text-light">Facebook</a>,
+            <a href="#" class="text-light">Instagram</a>,
+            <a href="#" class="text-light">Twitter</a>
+        </p>
+    </footer>
+</body>       
+
+
+
+
+
